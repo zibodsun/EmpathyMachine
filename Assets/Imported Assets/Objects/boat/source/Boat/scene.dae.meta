@@ -1,0 +1,249 @@
+fileFormatVersion: 2
+guid: cc80db00502c04844befff5feda0d888
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ALBERO-MAIN
+    second: {fileID: 2100000, guid: 246634ef76d26804ea4af5b9accfa8d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ANCORA
+    second: {fileID: 2100000, guid: b470d04b5f3a1eb42b14619265da2d5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ANTENNA
+    second: {fileID: 2100000, guid: 65b9fd7da5055da4b857c744b251206e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ANTENNA-luce_rossa
+    second: {fileID: 2100000, guid: 84b83197bd29abf42b6c372ff6dc044d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ANTENNA-luce_verde
+    second: {fileID: 2100000, guid: cc57e7ff0b37da04e8188692e9fe9379, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BARCA-ESTERNO
+    second: {fileID: 2100000, guid: 0474f1308959c4d4994f0b392206c6eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BARCA_INTERNO
+    second: {fileID: 2100000, guid: 20be70e47028acf4fa04e81c89b16978, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BITTE
+    second: {fileID: 2100000, guid: 11ad95faefa4c2842a21086f5f38abff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CABINA
+    second: {fileID: 2100000, guid: 9c011b3776bbbce42948b3b3a1b33706, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CABINA-VETRI
+    second: {fileID: 2100000, guid: 5cec728e42ac65e45bfcc85d68928114, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CORDE-scure
+    second: {fileID: 2100000, guid: d2bf0d35fee474e429938cf87cff6bd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LAMPADA-avanti
+    second: {fileID: 2100000, guid: 55297d2320ae0404a961c3e2ea4918e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LAMPADA-avanti-luce
+    second: {fileID: 2100000, guid: 27402e5d56222bd45966ce44f4a19322, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LAMPIONCINO-corpo
+    second: {fileID: 2100000, guid: c3f294f456b70e3499b926555d749825, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LAMPIONCINO-vetri
+    second: {fileID: 2100000, guid: 3d5845a0c77821a44b398613c2ab9704, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MOTORE
+    second: {fileID: 2100000, guid: 10fe53f87c0d2c64ab6ba4560a1280a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PARABORDI
+    second: {fileID: 2100000, guid: 7c662e05a5354004fbb4a3b60a959da7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PIPE
+    second: {fileID: 2100000, guid: 05109e2c72e82a14fa338cbfc2bb4239, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: REGGIMANO
+    second: {fileID: 2100000, guid: b9fc71e74c82e5a449bf649fc4f00b89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: REGGIMANO-bordi
+    second: {fileID: 2100000, guid: ecf63d2df7563ec44a65809b2f07919a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RINGHIERA
+    second: {fileID: 2100000, guid: dcfa20e1d7fed2643b1bfa5f27506155, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SALVAGENTE-TETTO
+    second: {fileID: 2100000, guid: 28b9c55fddae91c45a7266d67004bcc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SALVAGENTE-bordi-bianco
+    second: {fileID: 2100000, guid: fc39ab6333036af488d521da16215753, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SALVAGENTE-bordi-rosso
+    second: {fileID: 2100000, guid: 73af0422090be404db3209ac523e5925, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TENDA
+    second: {fileID: 2100000, guid: 43f2dc365dd363448aa95a977d9282f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TENDA-BASTONI
+    second: {fileID: 2100000, guid: 1feed4722a26b2b45863ee34bb784c3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TIMONE
+    second: {fileID: 2100000, guid: 6f77637fa0ee97b4581602974cc8a8da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: scaletta
+    second: {fileID: 2100000, guid: 11b7f69f713a7cd4280fec6d40a24052, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
