@@ -47,10 +47,8 @@ public class NarratorAudioControl : MonoBehaviour
         Play(nextLine, 0f);
     }
     IEnumerator WaitUntilFinished(float clipLength, float delay) {
-        Debug.Log("Starting a line that lasts seconds = " + clipLength + delay);
         yield return new WaitForSeconds(clipLength + delay);
         audioIsPlaying = false;
-        Debug.Log("Previous line finished");
         SwitchState();
     }
 
