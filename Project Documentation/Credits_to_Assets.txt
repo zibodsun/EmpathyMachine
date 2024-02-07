@@ -4,3 +4,5 @@ https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-skybox-f
 https://assetstore.unity.com/packages/3d/environments/simplistic-low-poly-nature-93894
 https://assetstore.unity.com/packages/3d/environments/landscapes/free-low-poly-nature-forest-205742
 https://assetstore.unity.com/packages/vfx/particles/fire-explosions/procedural-fire-141496
+https://www.turbosquid.com/3d-models/broom-3d-model/522556
+https://www.turbosquid.com/3d-models/3d-broom-dust-pan-1451997
