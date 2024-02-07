@@ -36,7 +36,6 @@ public class PathToFollow : MonoBehaviour
         // reached point
         if (!agent.pathPending)
         {
-            Debug.Log(agent.name + " " + agent.remainingDistance);
             if (agent.remainingDistance <= 2 && agent.remainingDistance != 0)
             {
                 nextPoint++;

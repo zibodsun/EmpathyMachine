@@ -20,6 +20,5 @@ public class Runner : MonoBehaviour
 
     public virtual void BeginRunningSequence() {
         path.StartPath();
-        Debug.Log("SetPath");
     }
 }
