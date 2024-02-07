@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class Hare : Runner
 {
-
     public void StopRun() {
         agent.speed = 0f;
     }

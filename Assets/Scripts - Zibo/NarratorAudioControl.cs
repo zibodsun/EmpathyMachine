@@ -9,12 +9,18 @@ public class NarratorAudioControl : MonoBehaviour
     public List<GameObject> audioLines = new();     // an ordered sequence of audio sources
     public Runner hare, turtle;
 
+    public SceneTransitionManager sceneTransitionManager;
     int nextLine = 0;
     bool audioIsPlaying = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        if(sceneTransitionManager != null)
+        {
+            sceneTransitionManager = FindAnyObjectByType<SceneTransitionManager>();
+        }
+
         StartCoroutine(DelayedStart());
     }
 
@@ -89,7 +95,13 @@ public class NarratorAudioControl : MonoBehaviour
                     Play(nextLine, 5f);    
                 }
                 hare.anim.SetTrigger("BeginRun");
+                StartCoroutine(WaitThenEndScene());
                 break;
         }
+    }
+
+    IEnumerator WaitThenEndScene() {
+        yield return new WaitForSeconds(sceneTransitionManager.timeToWaitBeforeEnd);
+        sceneTransitionManager.anim.Play("FadeOutToBlack");
     }
 }
