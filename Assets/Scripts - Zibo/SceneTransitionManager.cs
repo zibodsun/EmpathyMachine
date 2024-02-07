@@ -9,10 +9,11 @@ public class SceneTransitionManager : MonoBehaviour
 
     public float _timer;
     private float _timeElapsed;
+    private Animator anim;
 
     private void Awake()
     {
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,11 +24,10 @@ public class SceneTransitionManager : MonoBehaviour
             _timeElapsed += Time.deltaTime;
         }
         else {
-            SwapScene();
+            anim.Play("FadeOutToBlack");
         }
     }
-
-    public void SwapScene() {
+    public void LoadNewScene() {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
