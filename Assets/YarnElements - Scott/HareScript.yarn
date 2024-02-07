@@ -1,0 +1,21 @@
+﻿title: sequence0
+tags:
+---
+Aha! Good Morning Sleepyhead! Prepare yourself for a day of adventure! #line:00498cc
+-> A talking hare? #line:021fae0 
+    Correct! You are very perceptive #line:07d712b 
+-> I'm ready! #line:0587a70 
+    Excellent! Such enthusiasm! #line:0b069e1 
+
+We have many quests to complete and challenges to face #line:00ea49d 
+To begin, we must clean your realm of bedroom #line:0ed9d0d 
+Gather the toys and return them to their rightful homes! #line:0585945 
+
+<<setSequence Hare 1>>
+===
+
+title: sequence1
+tags:
+---
+Ima Dancing Bunny
+===
