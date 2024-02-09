@@ -60290,7 +60290,7 @@ MonoBehaviour:
   bullet: {fileID: 8538589052719289911, guid: 3cc5493131c2b3f419118c5c907a60de, type: 3}
   muzzle: {fileID: 1828167705}
   bulletSpeed: 10
-  wondrousEvent: {fileID: 1638944617}
+  wondrousEvent: {fileID: 643164551}
 --- !u!1 &8676210241157147039
 GameObject:
   m_ObjectHideFlags: 0
