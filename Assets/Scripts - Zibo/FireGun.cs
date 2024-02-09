@@ -9,11 +9,14 @@ public class FireGun : MonoBehaviour
     public GameObject bullet;
     public Transform muzzle;
     public float bulletSpeed = 10f;
+    public GameObject wondrousEvent;
+
+    XRGrabInteractable grabInteractable;
 
     // Start is called before the first frame update
     void Start()
     {
-        XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
+        grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.activated.AddListener(Shoot);
     }
 
@@ -28,6 +31,13 @@ public class FireGun : MonoBehaviour
 
     // Shoot event that creates a bullet and destroys it after 5 seconds
     public void Shoot(ActivateEventArgs args) {
+
+        // disable shooting if the event finished
+        if (!wondrousEvent.activeSelf)
+        {
+            grabInteractable.activated.RemoveListener(Shoot);
+        }
+
         GameObject b = Instantiate(bullet, muzzle.position, Quaternion.identity);
         b.GetComponent<Rigidbody>().velocity = muzzle.forward * bulletSpeed;
         Destroy(b, 5);
