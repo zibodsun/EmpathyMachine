@@ -13,7 +13,7 @@ public class WondrousEventManager : MonoBehaviour
     [Header("Sword Event")]
     public GameObject swordEvent;
     public float swordEventDuration = 15f;
-    public GenericWondrousObject broom;
+    public Broom broom;
     private bool _swordEventExecuted;
 
     public void EnableSlimeShootingEvent() {
@@ -30,6 +30,7 @@ public class WondrousEventManager : MonoBehaviour
 
         _swordEventExecuted = true;
         broom.GetComponent<Animator>().Play("TransformToSword");
+        broom.isSword = true;
         swordEvent.SetActive(true);
         StartCoroutine(StopEvent(swordEvent, swordEventDuration));
     }
