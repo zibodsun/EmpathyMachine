@@ -9,7 +9,8 @@ Aha! Good Morning Sleepyhead! Prepare yourself for a day of adventure! #line:004
 
 We have many quests to complete and challenges to face #line:00ea49d 
 To begin, we must clean your realm of bedroom #line:0ed9d0d 
-Gather the toys and return them to their rightful homes! #line:0585945 
+We shall gather the toys and return them to their rightful homes! #line:0585945 
+Follow me! #line:0b9a04c 
 
 <<setSequence Hare 1>>
 ===
@@ -17,5 +18,16 @@ Gather the toys and return them to their rightful homes! #line:0585945
 title: sequence1
 tags:
 ---
-Ima Dancing Bunny
+Markers have been strewn across the floor! #line:068efff 
+Let's put them back! #line:05c7ae5 
+
+<<setSequence Hare 2>>
+===
+
+title: sequence2
+tags:
+---
+We can have some fun before putting them away #line:02ffcc5 
+Markers are meant to be used after all! #line:0716207 
+Draw me a fish! #line:000ebea 
 ===
