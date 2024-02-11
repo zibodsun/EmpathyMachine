@@ -10,6 +10,11 @@ public class GenericWondrousObject : MonoBehaviour
         indicator.SetActive(true);
     }
 
+    public virtual void OnDrop()
+    {
+        indicator.SetActive(false);
+    }
+
     public virtual void OnCorrectlyPlaced()
     {
         indicator.SetActive(false);
