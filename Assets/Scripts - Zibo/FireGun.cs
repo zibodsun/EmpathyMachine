@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class FireGun : MonoBehaviour
+public class FireGun : GenericWondrousObject
 {
     public GameObject bullet;
     public Transform muzzle;
