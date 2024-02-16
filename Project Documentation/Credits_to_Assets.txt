@@ -12,3 +12,4 @@ https://sketchfab.com/3d-models/wooden-box-c8c9ce315f2347e28c29e23979383129#down
 https://assetstore.unity.com/packages/vfx/particles/hyper-casual-fx-200333
 https://polygone.art/#page=Model&guid=2TGcPBw1noz
 https://polygone.art/#page=Model&guid=0sAbACg9Nvm
+https://assetstore.unity.com/packages/vfx/particles/fire-explosions/free-stylized-smoke-effects-pack-226406
