@@ -33,6 +33,7 @@ public class SpawnTracks : MonoBehaviour
             if (index < tracks.Count)
             {
                 tracks[index].SetActive(true);
+                tracks[index].GetComponent<Track>().timer = 20f - index;
                 index++;
             }
         }

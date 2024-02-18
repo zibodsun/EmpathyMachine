@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Track : MonoBehaviour
 {
-    Vector3 growSpeed = new Vector3(0.2f, 0.2f, 0.2f);
+    Vector3 growSpeed = new Vector3(0.05f, 0.05f, 0.05f);
     float size;
+    public float timer;
+    float time;
+    bool spawning = true;
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +20,34 @@ public class Track : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.localScale.x < size) {
-            transform.localScale += growSpeed;
+        switch (spawning) {
+            case true:
+                if (transform.localScale.x < size)
+                {
+                    transform.localScale += growSpeed;
+                }
+                else {
+                    spawning = false;
+                }
+                break;
+            case false:
+                if (time <= timer)
+                {
+                    time += Time.deltaTime;
+                }
+                else
+                {
+                    if (transform.localScale.x > 0)
+                    {
+                        transform.localScale -= growSpeed;
+                    }
+                    else
+                    {
+                        spawning = true;
+                        gameObject.SetActive(false);
+                    }
+                }
+                break;
         }
     }
 }
