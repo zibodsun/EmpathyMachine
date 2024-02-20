@@ -13,3 +13,5 @@ https://assetstore.unity.com/packages/vfx/particles/hyper-casual-fx-200333
 https://polygone.art/#page=Model&guid=2TGcPBw1noz
 https://polygone.art/#page=Model&guid=0sAbACg9Nvm
 https://assetstore.unity.com/packages/vfx/particles/fire-explosions/free-stylized-smoke-effects-pack-226406
+https://github.com/DavidArayan/ezy-slice
+https://www.youtube.com/watch?v=GQzW6ZJFQ94
