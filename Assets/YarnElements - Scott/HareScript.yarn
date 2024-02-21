@@ -1,0 +1,39 @@
+﻿title: surprise
+tags:
+---
+<<setActivity Hare introduction>>
+<<jump introduction>>
+===
+
+title: introduction
+tags:
+---
+Boo! Get up Sleepy! Adventure Awaits! #line:00498cc
+-> A talking rabbit? #line:021fae0 
+    I'm a HARE actually! #line:07d712b 
+-> Adventure? #line:0587a70 
+    Of course! #line:0b069e1 
+
+We have many tasks and quests to complete! #line:08426a3 
+Lets begin by cleaning your room. #line:06d3ba9 
+Follow me! #line:0b9a04c 
+
+<<setActivity Hare markerPickup>>
+===
+
+title: markers
+tags:
+---
+Markers have been left all over the floor! #line:068efff 
+Let's put them back! #line:05c7ae5 
+
+<<setActivity Hare drawing>>
+===
+
+title: draw
+tags:
+---
+We can have some fun before putting them away #line:02ffcc5 
+Do some drawing! #line:07bf80e 
+<<startDrawing Paper>>
+===
