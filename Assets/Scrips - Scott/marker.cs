@@ -46,7 +46,9 @@ public class marker : MonoBehaviour
 
             activelyDrawing = true;
 
-            currentLineRenderer = Instantiate(drawing, newPosition, Quaternion.identity).GetComponent<LineRenderer>();
+            currentLineRenderer = Instantiate(drawing, other.transform.position, Quaternion.identity).GetComponent<LineRenderer>();
+            currentLineRenderer.transform.SetParent(other.transform);
+            currentLineRenderer.transform.position -= other.transform.position;
             currentLength = 2;
 
             currentLineRenderer.SetPosition(0, newPosition);
@@ -59,9 +61,6 @@ public class marker : MonoBehaviour
         if (other.gameObject.layer == 3)
         {
             activelyDrawing = false;
-
-            currentLineRenderer.startColor = Color.red;
-            currentLineRenderer.endColor = Color.red;
         }
     }
 }
