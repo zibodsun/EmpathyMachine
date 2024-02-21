@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  Toggles on and off the wondrous events and sets their duration.
+ */
 public class WondrousEventManager : MonoBehaviour
 {
     [Header("Slime Shooting Event")]
@@ -15,6 +18,12 @@ public class WondrousEventManager : MonoBehaviour
     public float swordEventDuration = 15f;
     public Broom broom;
     private bool _swordEventExecuted;
+
+    [Header("Train Event")]
+    public GameObject trainEvent;
+    public AnimationClip startTrainAnimation;
+    public AnimationClip activeTrainAnimation;
+    private bool _trainEventExecuted;
 
     public void EnableSlimeShootingEvent() {
         if (_slimeEventExecuted) return;
@@ -33,6 +42,14 @@ public class WondrousEventManager : MonoBehaviour
         broom.isSword = true;
         swordEvent.SetActive(true);
         StartCoroutine(StopEvent(swordEvent, swordEventDuration + 3f));    // sword event is interrupted in its own script
+    }
+
+    public void EnableTrainEvent() {
+        if (_trainEventExecuted) return;
+
+        _trainEventExecuted = true;
+        trainEvent.SetActive(true);
+        StartCoroutine(StopEvent(trainEvent, activeTrainAnimation.length + startTrainAnimation.length + 3f));
     }
 
     IEnumerator StopEvent(GameObject wondrousEvent, float duration) {
