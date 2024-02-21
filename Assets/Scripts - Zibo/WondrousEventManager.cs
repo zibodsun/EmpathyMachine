@@ -32,7 +32,7 @@ public class WondrousEventManager : MonoBehaviour
         broom.GetComponent<Animator>().Play("TransformToSword");
         broom.isSword = true;
         swordEvent.SetActive(true);
-        StartCoroutine(StopEvent(swordEvent, swordEventDuration));
+        //StartCoroutine(StopEvent(swordEvent, swordEventDuration));    // sword event is interrupted in its own script
     }
 
     IEnumerator StopEvent(GameObject wondrousEvent, float duration) {

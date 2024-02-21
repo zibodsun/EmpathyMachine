@@ -8,6 +8,7 @@ TagManager:
   - broom
   - Bullet
   - gun
+  - SlicedApple
   layers:
   - Default
   - TransparentFX

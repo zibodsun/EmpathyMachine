@@ -49,9 +49,14 @@ public class SliceObject : MonoBehaviour
         }
     }
 
-    public void SetupSlicedComponent(GameObject slicedObject) { 
+    public void SetupSlicedComponent(GameObject slicedObject) {
+
+        slicedObject.tag = "SlicedApple";
         Rigidbody rb = slicedObject.AddComponent<Rigidbody>();
+        rb.useGravity = false;
+
         MeshCollider collider = slicedObject.AddComponent<MeshCollider>();
+        
         collider.convex = true;
         rb.AddExplosionForce(cutForce, slicedObject.transform.position, 1);
     }
