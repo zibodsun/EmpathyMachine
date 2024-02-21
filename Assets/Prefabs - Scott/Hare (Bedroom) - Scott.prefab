@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 8597702065953535499}
   - component: {fileID: 8715608421882953996}
   - component: {fileID: 654031888107931112}
+  - component: {fileID: 8494435631995732567}
   m_Layer: 0
   m_Name: Hare (Bedroom) - Scott
   m_TagString: Untagged
@@ -395,8 +396,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7838152617479487466}
-  surprisePosition: {fileID: 0}
+  activities:
+  - {fileID: 11400000, guid: f75b762260c6ccb4ab906a1cf1aff518, type: 2}
+  - {fileID: 11400000, guid: 968a978894e70214784802fc91b3c966, type: 2}
+  - {fileID: 11400000, guid: 96f07e1123cb7c4499b61b6869d41b77, type: 2}
+  - {fileID: 11400000, guid: c2eb819834099b34b8495096501f9887, type: 2}
   agent: {fileID: 8597702065953535499}
+  hare: {fileID: 0}
+--- !u!114 &8494435631995732567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2329780406941188943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90d034a0f22f6f47af102b774b91b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Hare
+  talkToNode: Hare
+  scriptToLoad: {fileID: 7545569452688597077, guid: 34d180e0161366943aaca97a3f4cbb2c, type: 3}
+  dialogueRunner: {fileID: 0}
+  dialogueCanvas: {fileID: 0}
+  PostionSpeachBubble: {x: 0, y: 10, z: 0}
 --- !u!1 &2410937690183515403
 GameObject:
   m_ObjectHideFlags: 0
