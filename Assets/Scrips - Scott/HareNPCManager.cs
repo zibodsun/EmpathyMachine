@@ -7,38 +7,46 @@ using Yarn.Unity;
 public class HareNPCManager : MonoBehaviour
 {
     public Animator animator;
-    public Transform[] sequencePositions;
-    public string[] sequenceTriggers;
+    public NPCActivity[] activities;
+    Dictionary<string, NPCActivity> activityLookup = new Dictionary<string, NPCActivity>();
     public NavMeshAgent agent;
     public NPC3D hare;
 
-    int sequence = 0;
+    string currentActivity;
+
+    private void Start()
+    {
+        currentActivity = activities[0].activity;
+
+        foreach(NPCActivity activity in activities)
+        {
+            activityLookup.Add(activity.activity, activity);
+        }
+
+        updateActivity();
+    }
 
     private void Update()
     {
-        hare.talkToNode = "sequence" + sequence;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
+        if(agent.velocity.sqrMagnitude <= 0.1f)
         {
-            TriggerNewSequence();
+            transform.rotation = Quaternion.Euler(Vector3.Lerp(transform.rotation.eulerAngles, activityLookup[currentActivity].rotation.eulerAngles, Time.deltaTime * 0.6f));           
         }
+
+        animator.SetFloat("speed", agent.velocity.sqrMagnitude);
     }
 
-    [YarnCommand("setSequence")]
-    public void SetSequence(int number)
+    [YarnCommand("setActivity")]
+    public void setActivity(string activity)
     {
-        sequence = number;
-        TriggerNewSequence();
+        currentActivity = activity;
+        updateActivity();
     }
 
-    void TriggerNewSequence()
+    void updateActivity()
     {
-        animator.SetTrigger(sequenceTriggers[sequence]);
-        agent.SetDestination(sequencePositions[sequence].position);
-        Debug.Log(sequencePositions[sequence].position);
-        Debug.Log(transform.position);
+        hare.talkToNode = activityLookup[currentActivity].dialogueNode;
+        animator.SetTrigger(activityLookup[currentActivity].animationTrigger);
+        agent.SetDestination(activityLookup[currentActivity].agentDestination);
     }
 }

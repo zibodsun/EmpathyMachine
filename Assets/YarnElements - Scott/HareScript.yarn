@@ -1,33 +1,38 @@
-﻿title: sequence0
+﻿title: surprise
 tags:
 ---
-Aha! Good Morning Sleepyhead! Prepare yourself for a day of adventure! #line:00498cc
--> A talking hare? #line:021fae0 
-    Correct! You are very perceptive #line:07d712b 
--> I'm ready! #line:0587a70 
-    Excellent! Such enthusiasm! #line:0b069e1 
+<<setActivity Hare introduction>>
+<<jump introduction>>
+===
 
-We have many quests to complete and challenges to face #line:00ea49d 
-To begin, we must clean your realm of bedroom #line:0ed9d0d 
-We shall gather the toys and return them to their rightful homes! #line:0585945 
+title: introduction
+tags:
+---
+Boo! Get up Sleepy! Adventure Awaits! #line:00498cc
+-> A talking rabbit? #line:021fae0 
+    I'm a HARE actually! #line:07d712b 
+-> Adventure? #line:0587a70 
+    Of course! #line:0b069e1 
+
+We have many tasks and quests to complete! #line:08426a3 
+Lets begin by cleaning your room. #line:06d3ba9 
 Follow me! #line:0b9a04c 
 
-<<setSequence Hare 1>>
+<<setActivity Hare markerPickup>>
 ===
 
-title: sequence1
+title: markers
 tags:
 ---
-Markers have been strewn across the floor! #line:068efff 
+Markers have been left all over the floor! #line:068efff 
 Let's put them back! #line:05c7ae5 
 
-<<setSequence Hare 2>>
+<<setActivity Hare drawing>>
 ===
 
-title: sequence2
+title: draw
 tags:
 ---
 We can have some fun before putting them away #line:02ffcc5 
-Markers are meant to be used after all! #line:0716207 
-Draw me a fish! #line:000ebea 
+Do some drawing! #line:07bf80e 
 ===
