@@ -15,7 +15,10 @@ public class CenterPlayerOnSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        locomotionSystem.gameObject.SetActive(false);
+        if(locomotionSystem != null)
+        {
+            locomotionSystem.gameObject.SetActive(false);
+        }
         StartCoroutine(Center(0.1f));
     }
     
