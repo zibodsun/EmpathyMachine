@@ -20,10 +20,11 @@ public class FloatingApple : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         GetComponent<Renderer>().material = material;
-        transform.localScale = new Vector3(size, size, size);
+        //transform.localScale = new Vector3(size, size, size);
         rb.AddForce(floatDirection, ForceMode.Impulse);
         rb.AddTorque(torqueDirection);
-        transform.localScale = Vector3.zero;
+        transform.localScale = new Vector3(0.0001f,0.0001f,0.0001f);
+        Debug.Log("Apple Start. Scale = " + transform.localScale);
     }
 
     // Update is called once per frame
@@ -36,12 +37,15 @@ public class FloatingApple : MonoBehaviour
         }
 
         if (transform.localScale.x < size) {
+            Debug.Log("Increasing Size = " + transform.localScale);
             transform.localScale += new Vector3(scaleIncrement * size, scaleIncrement * size, scaleIncrement * size);
         }
+        Debug.Log("Position: " + transform.position);
     }
     // Play effect when destroyed
     public void OnDestroy()
     {
+        Debug.Log("Try Destroy");
         if (apparitionEffect != null) {
             apparitionEffect.transform.position = transform.position;
             apparitionEffect.gameObject.SetActive(true);

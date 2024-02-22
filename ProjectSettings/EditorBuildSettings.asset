@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/DreamFable.unity
-    guid: f0e1107c9dea4f347b3319f633036017
-  - enabled: 1
     path: Assets/Scenes/BedroomScene Zibo.unity
     guid: 4541c1cc578e71e42980b160f56dfbe3
   m_configObjects:
