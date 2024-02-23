@@ -24,10 +24,6 @@ public class LivingDrawings : MonoBehaviour
     public TextMeshProUGUI drawPrompt;
     public GameObject livingDrawing;
 
-    private void Start()
-    {
-        drawPrompt.enabled = false;
-    }
 
     [YarnCommand("startDrawing")]
     public void startDrawingTask()

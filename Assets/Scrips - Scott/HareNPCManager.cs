@@ -23,7 +23,7 @@ public class HareNPCManager : MonoBehaviour
             activityLookup.Add(activity.activity, activity);
         }
 
-        updateActivity();
+        UpdateActivity();
     }
 
     private void Update()
@@ -37,16 +37,27 @@ public class HareNPCManager : MonoBehaviour
     }
 
     [YarnCommand("setActivity")]
-    public void setActivity(string activity)
+    public void SetActivity(string activity)
     {
         currentActivity = activity;
-        updateActivity();
+        UpdateActivity();
     }
 
-    void updateActivity()
+    void UpdateActivity()
     {
         hare.talkToNode = activityLookup[currentActivity].dialogueNode;
         animator.SetTrigger(activityLookup[currentActivity].animationTrigger);
         agent.SetDestination(activityLookup[currentActivity].agentDestination);
+    }
+
+    [YarnCommand("activate")]
+    public void ActivateObject(string targetObject)
+    {
+        GameObject toActivate = GameObject.Find(targetObject);
+
+        if (toActivate!=null)
+        {
+            toActivate.SetActive(true);
+        }
     }
 }
