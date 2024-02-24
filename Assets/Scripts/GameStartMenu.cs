@@ -5,17 +5,12 @@ using UnityEngine.UI;
 
 public class GameStartMenu : MonoBehaviour
 {
-    public GameObject scene;
-    public static bool continuousTurn;
-
     [Header("UI Pages")]
     public GameObject mainMenu;
     public GameObject form;
 
     [Header("Main Menu Buttons")]
     public Button startButton;
-    public Button smoothButton;
-    public Button snapButton;
     public Button quitButton;
 
     public List<Button> returnButtons;
@@ -27,8 +22,6 @@ public class GameStartMenu : MonoBehaviour
 
         //Hook events
         startButton.onClick.AddListener(EnableForm);
-        smoothButton.onClick.AddListener(EnableSmoothTurning);
-        snapButton.onClick.AddListener(EnableSnapTurning);
         quitButton.onClick.AddListener(QuitGame);
 
         foreach (var item in returnButtons)
@@ -47,13 +40,6 @@ public class GameStartMenu : MonoBehaviour
         form.SetActive(true);
     }
 
-    public void StartGame()
-    {
-        HideAll();
-        //SceneTransitionManager.singleton.GoToSceneAsync(1);
-        scene.SetActive(true);
-    }
-
     public void HideAll()
     {
         mainMenu.SetActive(false);
@@ -64,13 +50,5 @@ public class GameStartMenu : MonoBehaviour
     {
         mainMenu.SetActive(true);
         form.SetActive(false);
-    }
-    public void EnableSmoothTurning()
-    {
-        // 
-    }
-    public void EnableSnapTurning()
-    {
-        // 
     }
 }

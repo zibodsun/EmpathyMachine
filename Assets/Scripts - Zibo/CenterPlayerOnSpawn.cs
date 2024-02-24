@@ -9,8 +9,13 @@ using UnityEngine.XR.Interaction.Toolkit;
  */
 public class CenterPlayerOnSpawn : MonoBehaviour
 {
+    [Header("Recentering XROrigin")]
     public Transform spawn;
     public LocomotionSystem locomotionSystem;
+
+    [Header("Player Preference Values")]
+    public ActionBasedSnapTurnProvider snapTurn;
+    public ActionBasedContinuousTurnProvider continuousTurn;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +23,7 @@ public class CenterPlayerOnSpawn : MonoBehaviour
         if(locomotionSystem != null)
         {
             locomotionSystem.gameObject.SetActive(false);
+            ApplyPlayerPref();
         }
         StartCoroutine(Center(0.1f));
     }
@@ -36,7 +42,10 @@ public class CenterPlayerOnSpawn : MonoBehaviour
 
         xrorigin.MoveCameraToWorldLocation(new Vector3(spawn.position.x, xrorigin.Camera.transform.position.y, spawn.position.z));
         xrorigin.MatchOriginUpCameraForward(spawn.up, spawn.forward);
-        locomotionSystem.gameObject.SetActive(true);
+
+        if (locomotionSystem != null) {
+            locomotionSystem.gameObject.SetActive(true);
+        }
     }
 
     void Center()
@@ -46,5 +55,27 @@ public class CenterPlayerOnSpawn : MonoBehaviour
         xrorigin.MoveCameraToWorldLocation(new Vector3(spawn.position.x, xrorigin.Camera.transform.position.y, spawn.position.z));
         xrorigin.MatchOriginUpCameraForward(spawn.up, spawn.forward);
         locomotionSystem.gameObject.SetActive(true);
+    }
+
+    public void ApplyPlayerPref()
+    {
+        if (PlayerPrefs.HasKey("turn"))
+        {
+            int value = PlayerPrefs.GetInt("turn");
+            if (value == 0)
+            {
+                snapTurn.leftHandSnapTurnAction.action.Enable();
+                snapTurn.rightHandSnapTurnAction.action.Enable();
+                continuousTurn.leftHandTurnAction.action.Disable();
+                continuousTurn.rightHandTurnAction.action.Disable();
+            }
+            else if (value == 1)
+            {
+                snapTurn.leftHandSnapTurnAction.action.Disable();
+                snapTurn.rightHandSnapTurnAction.action.Disable();
+                continuousTurn.leftHandTurnAction.action.Enable();
+                continuousTurn.rightHandTurnAction.action.Enable();
+            }
+        }
     }
 }
