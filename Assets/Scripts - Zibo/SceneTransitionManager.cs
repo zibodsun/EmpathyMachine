@@ -37,7 +37,7 @@ public class SceneTransitionManager : MonoBehaviour
     public IEnumerator SwitchSceneDelayed(float time)
     {
         yield return new WaitForSeconds(time);
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        anim.Play("FadeOutToBlack");
     }
 
     public void ShowMenuScene() {
