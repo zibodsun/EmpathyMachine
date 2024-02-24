@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class FormDataInput : MonoBehaviour
 {
+    public SceneTransitionManager sceneTransitionManager;
     public Button startButton;
     public GameObject scene;
 
@@ -16,7 +17,6 @@ public class FormDataInput : MonoBehaviour
 
     public void StartGame()
     {
-        scene.SetActive(true);
-        SceneManager.LoadScene("BedroomScene Zibo");
+        sceneTransitionManager.GetComponent<Animator>().Play("PulseToBlack");
     }
 }

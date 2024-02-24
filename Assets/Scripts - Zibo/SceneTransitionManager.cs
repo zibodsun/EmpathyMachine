@@ -6,11 +6,13 @@ using UnityEngine.XR.Interaction.Toolkit.Filtering;
 
 public class SceneTransitionManager : MonoBehaviour
 {
-
     public float _timer;
     private float _timeElapsed;
     public Animator anim;
     public float timeToWaitBeforeEnd = 1f;
+
+    public GameObject scene;
+    public GameStartMenu menu;
 
     private void Awake()
     {
@@ -30,5 +32,17 @@ public class SceneTransitionManager : MonoBehaviour
     }
     public void LoadNewScene() {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public IEnumerator SwitchSceneDelayed(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void ShowMenuScene() {
+        scene.SetActive(true);
+        menu.HideAll();
+        StartCoroutine(SwitchSceneDelayed(7f));
     }
 }
