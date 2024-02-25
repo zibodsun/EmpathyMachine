@@ -35,7 +35,7 @@ public class Slime : MonoBehaviour
     {
         if (other.tag == "Bullet") {
             anim.SetTrigger("Hit");
-            other.transform.SetParent(transform);
+            Destroy(other.gameObject);
         }
     }
 }

@@ -20,8 +20,12 @@ public class AirtableManager : MonoBehaviour
 
     [Header("Data For Airtable")]
     // Data fields for recording information
-    public string dateTime;
-    public string age;
+    public string dateTime = "NS";
+    public string age = "< 11";
+    public string liveDrawingRating = "0";
+    public string toyGunRating = "0";
+    public string trainRating = "0";
+    public string swordGameRating = "0";
 
     [Header("Data From Airtable")]
     // Data fields for retrieving information from Airtable
@@ -36,8 +40,15 @@ public class AirtableManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);    
-    }
+        DontDestroyOnLoad(this.gameObject);
+
+        dateTime = "NS";
+        age = "< 11";
+        liveDrawingRating = "0";
+        toyGunRating = "0";
+        trainRating = "0";
+        swordGameRating = "0";
+}
 
     // Method to create a new record in Airtable
     public void CreateRecord()
@@ -58,6 +69,10 @@ public class AirtableManager : MonoBehaviour
         string jsonFields = "{\"fields\": {" +
                                     "\"DateTime\":\"" + dateTime + "\", " +
                                     "\"Age\":\"" + age + "\"" +
+                                    "\"LiveDrawingRating\":\"" + liveDrawingRating + "\"" +
+                                    "\"ToyGunRating\":\"" + toyGunRating + "\"" +
+                                    "\"TrainRating\":\"" + trainRating + "\"" +
+                                    "\"SwordGameRating\":\"" + swordGameRating + "\"" +
                                     "}}";
 
         // Start the coroutine to send the API request

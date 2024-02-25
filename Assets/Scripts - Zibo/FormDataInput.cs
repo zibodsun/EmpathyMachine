@@ -23,7 +23,7 @@ public class FormDataInput : MonoBehaviour
     {
         airTable = FindObjectOfType<AirtableManager>();
         startButton.onClick.AddListener(StartGame);
-        turnDropdown.onValueChanged.AddListener(SetTurnPlayerPref);
+        turnDropdown.onValueChanged.AddListener(SetAge);
     }
 
     public void StartGame()
@@ -34,7 +34,7 @@ public class FormDataInput : MonoBehaviour
 
         Debug.Log("Selected option:" + dropdownOutput);
     }
-    public void SetTurnPlayerPref(int value)
+    public void SetAge(int value)
     {
         switch (value) {
             case 0:

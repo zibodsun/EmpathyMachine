@@ -12,6 +12,7 @@ public class CenterPlayerOnSpawn : MonoBehaviour
     [Header("Recentering XROrigin")]
     public Transform spawn;
     public LocomotionSystem locomotionSystem;
+    public float centeringDelay = 0.1f;
 
     [Header("Player Preference Values")]
     public ActionBasedSnapTurnProvider snapTurn;
@@ -20,12 +21,15 @@ public class CenterPlayerOnSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(locomotionSystem != null)
+        DisableTurn();
+
+        if (locomotionSystem != null)
         {
+            Debug.Log("Disabled locomotion and applied turning options.");
             locomotionSystem.gameObject.SetActive(false);
             ApplyPlayerPref();
         }
-        StartCoroutine(Center(0.1f));
+        StartCoroutine(Center(centeringDelay));
     }
     
     private void Update()
@@ -59,23 +63,29 @@ public class CenterPlayerOnSpawn : MonoBehaviour
 
     public void ApplyPlayerPref()
     {
+        snapTurn.enabled = true;
+        continuousTurn.enabled = true;
+
         if (PlayerPrefs.HasKey("turn"))
         {
             int value = PlayerPrefs.GetInt("turn");
             if (value == 0)
             {
-                snapTurn.leftHandSnapTurnAction.action.Enable();
+                Debug.Log("Set turning option to Snap");
                 snapTurn.rightHandSnapTurnAction.action.Enable();
-                continuousTurn.leftHandTurnAction.action.Disable();
                 continuousTurn.rightHandTurnAction.action.Disable();
             }
             else if (value == 1)
             {
-                snapTurn.leftHandSnapTurnAction.action.Disable();
+                Debug.Log("Set turning option to Continuous");
                 snapTurn.rightHandSnapTurnAction.action.Disable();
-                continuousTurn.leftHandTurnAction.action.Enable();
                 continuousTurn.rightHandTurnAction.action.Enable();
             }
         }
+    }
+
+    public void DisableTurn() {
+        snapTurn.rightHandSnapTurnAction.action.Disable();
+        continuousTurn.rightHandTurnAction.action.Disable();
     }
 }

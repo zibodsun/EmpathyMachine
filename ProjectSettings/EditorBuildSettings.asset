@@ -9,7 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/0_Menu Scene.unity
     guid: 26c525e1039643245b02a9b7b014e52a
   - enabled: 1
-    path: Assets/Scenes/BedroomScene Zibo.unity
+    path: Assets/Scenes/DreamFable.unity
+    guid: f0e1107c9dea4f347b3319f633036017
+  - enabled: 1
+    path: Assets/Scenes/0_BedroomScene Zibo.unity
     guid: 4541c1cc578e71e42980b160f56dfbe3
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
