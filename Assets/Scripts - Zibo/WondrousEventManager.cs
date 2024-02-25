@@ -7,6 +7,9 @@ using UnityEngine;
  */
 public class WondrousEventManager : MonoBehaviour
 {
+    [Header("Data Storage")]
+    public AirtableManager airTable;
+
     [Header("Slime Shooting Event")]
     public GameObject slimeShootingEvent;
     public float slimeShootingEventDuration = 15f;
@@ -24,6 +27,12 @@ public class WondrousEventManager : MonoBehaviour
     public AnimationClip startTrainAnimation;
     public AnimationClip activeTrainAnimation;
     private bool _trainEventExecuted;
+
+    private void Awake()
+    {
+        airTable = FindObjectOfType<AirtableManager>();
+        airTable.CreateRecord();
+    }
 
     public void EnableSlimeShootingEvent() {
         if (_slimeEventExecuted) return;
