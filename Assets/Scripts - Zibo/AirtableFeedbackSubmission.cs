@@ -4,6 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ *  Final form shown at the end of the app. Submits data for AirTable storage as strings containing a rating from 1 - 5.
+ */
 public class AirtableFeedbackSubmission : MonoBehaviour
 {
     [Header("Scripts")]

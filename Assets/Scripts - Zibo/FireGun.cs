@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/*
+ *  Attach to the toy gun object for the wondrous event. While holding the gun, the player can shoot with the trigger. Bullets that hit the slimes will kill them.
+ */
 public class FireGun : GenericWondrousObject
 {
     public GameObject bullet;

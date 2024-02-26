@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  Attach to the apple to make it float in air. Plays an animation when destroyed.
+ */
 public class FloatingApple : MonoBehaviour
 {
     public Material material;

@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
+/*
+ *  A script to make a Runner class follow a Path set by a variable number of positions. Uses NavMesh navigation.
+ */
 public class PathToFollow : MonoBehaviour
 {
     public Transform path;          // A gameobject with a number of positions on a path as children

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  Controls the sword (apple slicing) event. The apples are placed in world space and are stored in this class.
+ */
 public class SpawnApplesSwordEvent : MonoBehaviour
 {
     public FloatingApple[] apples;

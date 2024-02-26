@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ *  In Game panel that shows debug logs.
+ */
 public class DebugDisplay : MonoBehaviour
 {
     Dictionary<string, string> debugLogs = new Dictionary<string, string>();

@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*
+ *  Second page of the menu screen. Starts the game and sends data to the airtable script for user selection.
+ */
 public class FormDataInput : MonoBehaviour
 {
     [Header("Scripts")]

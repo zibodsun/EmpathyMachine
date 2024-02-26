@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/*
+ *  A navmesh agent that will follow a set path in the Dream scene. Parent class of the Hare and Tortoise.
+ */
 public class Runner : MonoBehaviour
 {
     public PathToFollow path;

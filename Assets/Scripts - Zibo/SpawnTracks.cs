@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  Manages the spawn and despawn timings of the tracks in the Train event.
+ */
 public class SpawnTracks : MonoBehaviour
 {
     List<GameObject> tracks = new();

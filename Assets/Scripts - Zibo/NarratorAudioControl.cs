@@ -4,6 +4,9 @@ using System.Linq;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 
+/*
+ *  Manager of the dream sequence. Responsible for switching the state of the sequence and the timing of the events in the dream scene.
+ */
 public class NarratorAudioControl : MonoBehaviour
 {
     public List<GameObject> audioLines = new();     // an ordered sequence of audio sources
@@ -22,12 +25,6 @@ public class NarratorAudioControl : MonoBehaviour
         }
 
         StartCoroutine(DelayedStart());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     // Plays a narration line after pausing currently playing ones

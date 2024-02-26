@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  The broom script can be attached to play the animation to transform it into a sword
+ */
 public class Broom : GenericWondrousObject
 {
     public GameObject wondrousEvent;

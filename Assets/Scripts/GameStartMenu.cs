@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ *  Main menu of the application. Sets up the buttons and panels.
+ */
 public class GameStartMenu : MonoBehaviour
 {
     [Header("UI Pages")]

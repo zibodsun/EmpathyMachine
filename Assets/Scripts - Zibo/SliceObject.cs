@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using EzySlice;
 
+/*
+ *  This script is placed on an object that is aimed to use the Ezy Slice algorithm to cut meshes on the "Sliceable" layer.
+ */
 public class SliceObject : MonoBehaviour
 {
     public Transform startSlicePoint;

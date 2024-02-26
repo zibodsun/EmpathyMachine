@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  Plays the animations of the tracks in the train event.
+ */
 public class Track : MonoBehaviour
 {
     Vector3 growSpeed = new Vector3(0.05f, 0.05f, 0.05f);

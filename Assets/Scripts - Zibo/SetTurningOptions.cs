@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ *  Script to receive the turning mode choice from the menu screen and apply it in the XROrigin.
+ */
 public class SetTurningOptions : MonoBehaviour
 {
     public int value;

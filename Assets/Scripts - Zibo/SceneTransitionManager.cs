@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit.Filtering;
 
+/*
+ *  Controls the transition effects (Fade black screen) between scenes/screens. 
+ */
 public class SceneTransitionManager : MonoBehaviour
 {
     public float _timer;
