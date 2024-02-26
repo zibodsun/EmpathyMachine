@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class marker : MonoBehaviour
 {
+    public Color penColour;
+
     public GameObject drawing;
     public float distanceBetweenPositions;
 
@@ -49,6 +51,8 @@ public class marker : MonoBehaviour
             currentLineRenderer = Instantiate(drawing, other.transform.position, Quaternion.identity).GetComponent<LineRenderer>();
             currentLineRenderer.transform.SetParent(other.transform);
             currentLineRenderer.transform.position -= other.transform.position;
+            currentLineRenderer.startColor = penColour;
+            currentLineRenderer.endColor = penColour;
             currentLength = 2;
 
             currentLineRenderer.SetPosition(0, newPosition);

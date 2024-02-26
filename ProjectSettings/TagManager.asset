@@ -10,6 +10,7 @@ TagManager:
   - gun
   - SlicedApple
   - Dialogue Canvas
+  - Marker
   layers:
   - Default
   - TransparentFX

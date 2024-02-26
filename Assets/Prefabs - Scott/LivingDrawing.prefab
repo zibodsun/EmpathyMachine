@@ -45,3 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawingType: 0
+  firstDestinationOffset: {x: 0, y: 1, z: 0}
+  lerpBetweenPoints: []

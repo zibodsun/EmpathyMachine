@@ -4,6 +4,7 @@ tags:
 <<declare $markersDone = false>>
 <<declare $gunDone = false>>
 <<declare $broomDone = false>>
+<<declare $trainDone = false>>
 ===
 
 title: surprise
@@ -16,45 +17,52 @@ tags:
 title: introduction
 tags:
 ---
-Boo!
-Get up Sleepy! Adventure Awaits! #line:00498cc
+Boo! #line:boo
+About time sleepyhead, adventure awaits! #line:sleepyhead
 -> A talking rabbit? #line:021fae0 
-    I'm a HARE actually! #line:07d712b 
+    I'm a HARE actually! #line:hareactually 
 -> Adventure? #line:0587a70 
-    Of course! #line:0b069e1 
+    Of course! #line:ofcourse 
 
-We have many tasks and quests to complete! #line:08426a3 
-How should we begin?
+We have many tasks and quests to complete! #line:tasksandquests 
+How should we begin? #line:begin
 <<jump chooseTask>>
 ===
 
 title: chooseTask
 tags:
 ---
--> Put away markers
-    Excellent idea! Follow me!
+-> Put away markers <<if $markersDone is false>> #line:0624c59 
+    Excellent idea! Follow me! #line:excellent 
     <<setActivity Hare markerPickup>>
--> Put away toy gun
-    Let's do it!
+    <<set $markersDone to true>>
+-> Put away toy gun <<if $gunDone is false>> #line:05d9e33 
+    Let's do it! #line:doit
     <<setActivity Hare toygun>>
--> Put away broom
-    Great choice. Come on!
+    <<set $gunDone to true>>
+-> Put away broom <<if $broomDone is false>> #line:063e18d 
+    Great choice. Come on! #line:greatchoice 
     <<setActivity Hare broom>>
+    <<set $broomDone to true>>
+-> Put away train <<if $trainDone is false>> #line:02dfc93 
+    If you say so! #line:0fccbb3
+    <<setActivity Hare train>>
+    <<set $trainDone to true>>
 ===
 
 title: markers
 tags:
 ---
-Markers have been left all over the floor! #line:068efff 
-Let's put them back! #line:05c7ae5 
+Markers have been left all over the floor! #line:markersleft 
+Let's put them back! #line:putback 
 <<setActivity Hare drawing>>
 ===
 
 title: draw
 tags:
 ---
-We can have some fun before putting them away #line:02ffcc5 
-Do some drawing! #line:07bf80e
+We have time for some fun first #line:funfirst 
+Do some drawing! Then put them away when you're ready #line:somedrawing
 <<startDrawing Paper>>
 <<activate Hare DrawingCanvas>>
 ===
@@ -62,11 +70,20 @@ Do some drawing! #line:07bf80e
 title: broom
 tags:
 ---
-BROOOOM
+BROOOOM #line:0b5fbe3
+<<jump chooseTask>>
 ===
 
 title: toygun
 tags:
 ---
-GUN
+GUN #line:0cdc429 
+<<jump chooseTask>>
+===
+
+title: train
+tags:
+---
+train #line:09e53b0 
+<<jump chooseTask>>
 ===
