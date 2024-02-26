@@ -43,6 +43,6 @@ public class SceneTransitionManager : MonoBehaviour
     public void ShowMenuScene() {
         scene.SetActive(true);
         menu.HideAll();
-        StartCoroutine(SwitchSceneDelayed(7f));
+        StartCoroutine(SwitchSceneDelayed(timeToWaitBeforeEnd));
     }
 }
