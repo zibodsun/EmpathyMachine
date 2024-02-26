@@ -6,6 +6,9 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
 
+/*
+ *  Sends data to AirTable
+ */
 public class AirtableManager : MonoBehaviour
 {
     [Header("Scripts")]
@@ -26,6 +29,7 @@ public class AirtableManager : MonoBehaviour
     public string toyGunRating = "0";
     public string trainRating = "0";
     public string swordGameRating = "0";
+    public string playTime = "-1";
 
     [Header("Data From Airtable")]
     // Data fields for retrieving information from Airtable
@@ -38,8 +42,10 @@ public class AirtableManager : MonoBehaviour
     public string healthFromAirtable;
     public string scoreFromAirtable;
 
+    private float _playTimer;
     private void Awake()
     {
+        _playTimer = 0f;
         DontDestroyOnLoad(this.gameObject);
 
         dateTime = "NS";
@@ -49,6 +55,11 @@ public class AirtableManager : MonoBehaviour
         trainRating = "0";
         swordGameRating = "0";
 }
+
+    private void Update()
+    {
+        _playTimer += Time.deltaTime;
+    }
 
     // Method to create a new record in Airtable
     public void CreateRecord()
