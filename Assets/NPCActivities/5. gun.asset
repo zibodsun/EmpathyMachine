@@ -16,5 +16,5 @@ MonoBehaviour:
   animationTrigger: Talking
   agentDestination: {x: 8.55, y: 0.782, z: 14.011}
   dialogueNode: toygun
-  activateGameObjectName: gun
+  activateGameObjectName: 
   rotation: {x: 0, y: 0.90630776, z: 0, w: -0.42261833}
