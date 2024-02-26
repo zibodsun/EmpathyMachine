@@ -79,10 +79,10 @@ public class AirtableManager : MonoBehaviour
         // Create JSON data for the API request
         string jsonFields = "{\"fields\": {" +
                                     "\"DateTime\":\"" + dateTime + "\", " +
-                                    "\"Age\":\"" + age + "\"" +
-                                    "\"LiveDrawingRating\":\"" + liveDrawingRating + "\"" +
-                                    "\"ToyGunRating\":\"" + toyGunRating + "\"" +
-                                    "\"TrainRating\":\"" + trainRating + "\"" +
+                                    "\"Age\":\"" + age + "\", " +
+                                    "\"LiveDrawingRating\":\"" + liveDrawingRating + "\", " +
+                                    "\"ToyGunRating\":\"" + toyGunRating + "\", " +
+                                    "\"TrainRating\":\"" + trainRating + "\", " +
                                     "\"SwordGameRating\":\"" + swordGameRating + "\"" +
                                     "}}";
 
