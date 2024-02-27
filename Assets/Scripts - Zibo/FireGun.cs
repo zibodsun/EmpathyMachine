@@ -14,6 +14,10 @@ public class FireGun : GenericWondrousObject
     public float bulletSpeed = 10f;
     public GameObject wondrousEvent;
 
+    // for recoil animation
+    Animator anim;
+    Rigidbody rb;
+
     XRGrabInteractable grabInteractable;
 
     // Start is called before the first frame update
@@ -21,6 +25,8 @@ public class FireGun : GenericWondrousObject
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.activated.AddListener(Shoot);
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -41,6 +47,7 @@ public class FireGun : GenericWondrousObject
             grabInteractable.activated.RemoveListener(Shoot);
         }
 
+        StartCoroutine(Recoil());
         GameObject b = Instantiate(bullet, muzzle.position, Quaternion.identity);
         b.GetComponent<Rigidbody>().velocity = muzzle.forward * bulletSpeed;
         Destroy(b, 5);
@@ -49,8 +56,17 @@ public class FireGun : GenericWondrousObject
     // Debug Function called with keyboard press
     public void Shoot()
     {
+        StartCoroutine(Recoil());
         GameObject b = Instantiate(bullet, muzzle.position, Quaternion.identity);
         b.GetComponent<Rigidbody>().velocity = muzzle.forward * bulletSpeed;
         Destroy(b, 5);
+    }
+
+    // This function doesn't work with Grab Interactable
+    IEnumerator Recoil() {
+        anim.Play("Recoil");
+        rb.AddForce(transform.right * -80, ForceMode.Force);
+        yield return new WaitForSeconds(1f);
+        rb.velocity = Vector3.zero;
     }
 }

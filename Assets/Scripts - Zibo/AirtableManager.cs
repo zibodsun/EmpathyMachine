@@ -83,7 +83,8 @@ public class AirtableManager : MonoBehaviour
                                     "\"LiveDrawingRating\":\"" + liveDrawingRating + "\", " +
                                     "\"ToyGunRating\":\"" + toyGunRating + "\", " +
                                     "\"TrainRating\":\"" + trainRating + "\", " +
-                                    "\"SwordGameRating\":\"" + swordGameRating + "\"" +
+                                    "\"SwordGameRating\":\"" + swordGameRating + "\", " +
+                                    "\"PlayTime\":\"" + _playTimer + "\"" +
                                     "}}";
 
         // Start the coroutine to send the API request
