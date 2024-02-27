@@ -171,13 +171,13 @@ public class AirtableManager : MonoBehaviour
         string source = dataToParse;
 
         // Parse the JSON using Newtonsoft.Json
-        //dynamic data = JObject.Parse(source);
+        dynamic data = JObject.Parse(source);
 
         // Extract the record ID from the parsed JSON
-        //lastRecordID = data.id;
+        lastRecordID = data.id;
 
         // Log the last record ID
-        //Debug.Log("Last RecordID was: " + data.id);
+        Debug.Log("Last RecordID was: " + data.id);
 
         // Extract and display data based on the specified dataToLoad value
         if (dataToLoad == "PlayerName")
@@ -194,17 +194,17 @@ public class AirtableManager : MonoBehaviour
 
         if (dataToLoad == "PlayerData")
         {
-            //playerNameFromAirtable = data.fields.PlayerName;
-            //volumeFromAirtable = data.fields.Volume;
+            playerNameFromAirtable = data.fields.PlayerName;
+            volumeFromAirtable = data.fields.Volume;
             Debug.Log("From Airtable: Player Name: " + playerNameFromAirtable + ". Volume Data: " + volumeFromAirtable);
         }
 
         if (dataToLoad == "GameData")
         {
-            //coinsFromAirtable = data.fields.Coins;
-            //timePlayedFromAirtable = data.fields.TimePlayed;
-            //healthFromAirtable = data.fields.Health;
-            //scoreFromAirtable = data.fields.Score;
+            coinsFromAirtable = data.fields.Coins;
+            timePlayedFromAirtable = data.fields.TimePlayed;
+            healthFromAirtable = data.fields.Health;
+            scoreFromAirtable = data.fields.Score;
 
 
             Debug.Log("From Airtable: Game Data: Coins: " + coinsFromAirtable + " Time Played: " + timePlayedFromAirtable +
