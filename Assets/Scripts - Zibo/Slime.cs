@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.UI;
 using static UnityEngine.GraphicsBuffer;
 
+/*
+ *  Slimes are a part of the toy gun event. They will smoothly follow the player with their rotation. 
+ *  They can get hit by objects tagged "Bullet" which will kill them.
+ */
 public class Slime : MonoBehaviour
 {
     public Transform targetObj;
@@ -35,7 +39,7 @@ public class Slime : MonoBehaviour
     {
         if (other.tag == "Bullet") {
             anim.SetTrigger("Hit");
-            other.transform.SetParent(transform);
+            Destroy(other.gameObject);
         }
     }
 }

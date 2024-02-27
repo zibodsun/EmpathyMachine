@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  An indicator is a particle system in the shape of its respective wondrous object. This script recognises the correct object to be placed
+ *  and lets it be placed in the correct position when it enters this collider.
+ */
 public class Indicator : MonoBehaviour
 {
     public string objectTag;

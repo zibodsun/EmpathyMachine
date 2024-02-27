@@ -10,7 +10,7 @@ TagManager:
   - gun
   - SlicedApple
   - Dialogue Canvas
-  - Marker
+  - train
   layers:
   - Default
   - TransparentFX
@@ -19,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Sliceable
-  - 
+  - XROrigin
   - 
   - 
   - 

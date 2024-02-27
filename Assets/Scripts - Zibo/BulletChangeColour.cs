@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  Every bullet has a randomised colour between 4.
+ */
 public class BulletChangeColour : MonoBehaviour
 {
     // Start is called before the first frame update

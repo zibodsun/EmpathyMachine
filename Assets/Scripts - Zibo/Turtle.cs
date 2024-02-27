@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/*
+ *  Defines the functions that control the movement of the turtle. 
+ */
 public class Turtle : Runner
 {
     public float speed = 1f;

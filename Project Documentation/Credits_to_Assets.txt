@@ -1,4 +1,7 @@
 mixamo.com
+elevenlabs.io
+https://mixkit.co/free-sound-effects/game
+https://pixabay.com/
 https://www.turbosquid.com/3d-models/cartoon-rabbit-hare-3d-max/792890
 https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-skybox-free-18353
 https://assetstore.unity.com/packages/3d/environments/simplistic-low-poly-nature-93894
@@ -15,3 +18,4 @@ https://polygone.art/#page=Model&guid=0sAbACg9Nvm
 https://assetstore.unity.com/packages/vfx/particles/fire-explosions/free-stylized-smoke-effects-pack-226406
 https://github.com/DavidArayan/ezy-slice
 https://www.youtube.com/watch?v=GQzW6ZJFQ94
+https://github.com/wacki/Unity-VRInputModule/blob/master/Assets/SteamVR/InteractionSystem/Core/Scripts/VelocityEstimator.cs

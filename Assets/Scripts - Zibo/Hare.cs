@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/*
+ *  Define the speed and movement possibilities of the Hare.
+ */
 public class Hare : Runner
 {
     public void StopRun() {
