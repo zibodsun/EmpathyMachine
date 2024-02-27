@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/0_Menu Scene.unity
     guid: 26c525e1039643245b02a9b7b014e52a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/DreamFable.unity
     guid: f0e1107c9dea4f347b3319f633036017
   - enabled: 1
