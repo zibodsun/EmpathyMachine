@@ -62,7 +62,7 @@ public class FireGun : GenericWondrousObject
         Destroy(b, 5);
     }
 
-    // This function doesn't work with Grab Interactable
+    // Physics of this implementation don't work with XR Grab
     IEnumerator Recoil() {
         anim.Play("Recoil");
         rb.AddForce(transform.right * -80, ForceMode.Force);
