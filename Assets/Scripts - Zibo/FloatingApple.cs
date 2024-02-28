@@ -48,7 +48,6 @@ public class FloatingApple : MonoBehaviour
     // Play effect when destroyed
     public void OnDestroy()
     {
-        Debug.Log("Try Destroy");
         if (apparitionEffect != null) {
             apparitionEffect.transform.position = transform.position;
             apparitionEffect.gameObject.SetActive(true);
