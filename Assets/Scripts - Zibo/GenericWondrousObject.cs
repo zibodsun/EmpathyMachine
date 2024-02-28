@@ -13,13 +13,24 @@ public class GenericWondrousObject : MonoBehaviour
     public XRBaseInteractable firstInteractor;           // The interaction component that needs to be active to start the wondrous event
     public GameObject indicator;
 
+    Vector3 spawn;
     bool active = false;
 
-    private void Update()
+    public virtual void Start() { 
+        spawn = transform.position;
+    }
+
+    public virtual void Update()
     {
         if (active)
         {
             indicator.SetActive(true);
+        }
+
+        if (Vector3.Distance(transform.position, spawn) > 50)
+        {
+            transform.position = spawn;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 

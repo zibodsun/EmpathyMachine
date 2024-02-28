@@ -21,8 +21,9 @@ public class FireGun : GenericWondrousObject
     XRGrabInteractable grabInteractable;
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
+        base.Start();
         grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.activated.AddListener(Shoot);
         anim = GetComponent<Animator>();
@@ -30,8 +31,9 @@ public class FireGun : GenericWondrousObject
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
+        base.Update();
         // Debug shoot
         if (Keyboard.current.spaceKey.wasPressedThisFrame) {
             Shoot();
