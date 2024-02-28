@@ -408,7 +408,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 193533ef87237824ca0d1b21c76bae9c, type: 2}
   agent: {fileID: 8597702065953535499}
   hare: {fileID: 8494435631995732567}
-  trigger: {fileID: 0}
+  trigger: {fileID: 8715608421882953996}
   feedbackForm: {fileID: 0}
 --- !u!114 &8494435631995732567
 MonoBehaviour:
