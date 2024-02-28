@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activity: toygun
   animationTrigger: Talking
-  agentDestination: {x: 8.55, y: 0.782, z: 14.011}
+  agentDestination: {x: 8.55, y: 0.782, z: 13}
   dialogueNode: toygun
-  activateGameObjectName: 
+  taskObjects:
+  - Toy gun (Target)
   rotation: {x: 0, y: 0.90630776, z: 0, w: -0.42261833}

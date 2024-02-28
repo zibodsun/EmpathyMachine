@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activity: train
   animationTrigger: Talking
-  agentDestination: {x: 8.55, y: 0.782, z: 14.011}
+  agentDestination: {x: 4.396, y: 0.47175592, z: 11.681}
   dialogueNode: train
-  activateGameObjectName: 
-  rotation: {x: 0, y: 0.90630776, z: 0, w: -0.42261833}
+  taskObjects:
+  - Train (Target)
+  rotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}

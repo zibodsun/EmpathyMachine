@@ -13,17 +13,30 @@ public class GenericWondrousObject : MonoBehaviour
     public XRBaseInteractable firstInteractor;           // The interaction component that needs to be active to start the wondrous event
     public GameObject indicator;
 
-    public virtual void OnPickUp() { 
+    bool active = false;
+
+    private void Update()
+    {
+        if (active)
+        {
+            indicator.SetActive(true);
+        }
+    }
+
+    public virtual void OnPickUp() {
+        active = true;
         indicator.SetActive(true);
     }
 
     public virtual void OnDrop()
     {
+        active = false;
         indicator.SetActive(false);
     }
 
     public virtual void OnCorrectlyPlaced()
     {
+        active = false;
         indicator.SetActive(false);
     }
     [YarnCommand("activateWondrousProperties")]

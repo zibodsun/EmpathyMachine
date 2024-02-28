@@ -71,13 +71,9 @@ public class NPC3D : MonoBehaviour
     {
         if (canvasActive)
         {
-            Vector3 lookDir = dialogueCanvas.transform.position - playerGameObject.transform.position;
-            float radians = Mathf.Atan2(lookDir.x, lookDir.z);
-            float degrees = radians * Mathf.Rad2Deg;
-
-            float str = Mathf.Min(canvasTurnSpeed * Time.deltaTime, 1);
-            Quaternion targetRotation = Quaternion.Euler(0, degrees, 0);
-            dialogueCanvas.transform.rotation = Quaternion.Slerp(dialogueCanvas.transform.rotation, targetRotation, str);
+            Quaternion targetRotation = Quaternion.LookRotation(dialogueCanvas.transform.position - playerGameObject.transform.position);
+            targetRotation = Quaternion.Euler(0, targetRotation.eulerAngles.y, 0);
+            dialogueCanvas.transform.rotation = Quaternion.Lerp(dialogueCanvas.transform.rotation, targetRotation, 0.8f*Time.deltaTime);
         }
     }
 
@@ -92,6 +88,7 @@ public class NPC3D : MonoBehaviour
                 {
                     //move the Canvas to the object and off set
                     canvasActive = true;
+                    dialogueCanvas.SetActive(true);
                     dialogueCanvas.transform.SetParent(transform); // use the root to prevent scaling
                     dialogueCanvas.GetComponent<RectTransform>().anchoredPosition3D = transform.TransformVector(PostionSpeachBubble);
                 }
@@ -110,6 +107,7 @@ public class NPC3D : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            dialogueCanvas.SetActive(false);
             canvasActive = false;
         }
     }

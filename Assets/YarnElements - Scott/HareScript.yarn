@@ -34,15 +34,15 @@ How should we begin? #line:begin
 title: chooseTask
 tags:
 ---
+<<if $trainDone && $broomDone && $gunDone && $markersDone>>
+<<jump ending>>
+<<endif>>
+
 <<if $introDone>>
 What should we do next? #line:0ef5a56 
 <<endif>>
 
 <<set $introDone to true>>
-
-<<if $trainDone && $broomDone && $gunDone && $markersDone>>
-<<jump ending>>
-<<endif>>
 
 -> Put away markers <<if $markersDone is false>> #line:0624c59 
     Excellent idea! Follow me! #line:excellent 
@@ -50,14 +50,17 @@ What should we do next? #line:0ef5a56
     <<set $markersDone to true>>
 -> Put away toy gun <<if $gunDone is false>> #line:05d9e33 
     Let's do it! #line:doit
+    <<activateWondrousProperties Toygun>>
     <<setActivity Hare toygun>>
     <<set $gunDone to true>>
 -> Put away broom <<if $broomDone is false>> #line:063e18d 
     Great choice. Come on! #line:greatchoice 
+    <<activateWondrousProperties broom>>
     <<setActivity Hare broom>>
     <<set $broomDone to true>>
 -> Put away train <<if $trainDone is false>> #line:02dfc93 
     If you say so! #line:0fccbb3
+    <<activateWondrousProperties Train>>
     <<setActivity Hare train>>
     <<set $trainDone to true>>
 ===
@@ -77,34 +80,39 @@ We have time for some fun first #line:funfirst
 Do some drawing! Then put them away when you're ready #line:somedrawing
 <<startDrawing Paper>>
 <<activate Hare DrawingCanvas>>
-<<jump chooseTask>>
 ===
 
 title: broom
 tags:
 ---
-BROOOOM #line:0b5fbe3
-<<jump chooseTask>>
+The broom belongs in the corner. Let's return it #line:0b5fbe3
 ===
 
 title: toygun
 tags:
 ---
-GUN #line:0cdc429 
-<<jump chooseTask>>
+The toy gun has been left out. Put it back in the toy box #line:0cdc429 
 ===
 
 title: train
 tags:
 ---
-train #line:09e53b0 
-<<jump chooseTask>>
+Another toy left out. It belongs in the toy box #line:09e53b0 
 ===
 
 title: ending
 tags:
 ---
-Phew! I think that's everything! #line:02fd51c 
+Phew! I think we're done! #line:02fd51c 
 You put everything away and the room looks tidy. Well done! #line:0081812 
-Give us some feedback on your experience, and you're free to go #line:0f54694 
+Give us some feedback on your experience before you go
+I'm going to take a nap!
+<<feedback Hare>>
+<<setActivity Hare end>>
+===
+
+title: sleeping
+tags:
+---
+ZZZ
 ===

@@ -382,8 +382,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 9
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: 4
+  m_Center: {x: 0, y: 1, z: 2}
 --- !u!114 &654031888107931112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,8 +405,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5a1ac60af0a272a459b91603aa42a7ca, type: 2}
   - {fileID: 11400000, guid: afa7f0f54a7faa348bfd928febd979be, type: 2}
   - {fileID: 11400000, guid: 4c989debcc7122d48ad8030ac9bfa75f, type: 2}
+  - {fileID: 11400000, guid: 193533ef87237824ca0d1b21c76bae9c, type: 2}
   agent: {fileID: 8597702065953535499}
   hare: {fileID: 8494435631995732567}
+  trigger: {fileID: 0}
+  feedbackForm: {fileID: 0}
 --- !u!114 &8494435631995732567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,7 +427,7 @@ MonoBehaviour:
   scriptToLoad: {fileID: 7545569452688597077, guid: 34d180e0161366943aaca97a3f4cbb2c, type: 3}
   dialogueRunner: {fileID: 0}
   dialogueCanvas: {fileID: 0}
-  PostionSpeachBubble: {x: 0, y: 10, z: 0}
+  PostionSpeachBubble: {x: 0, y: 9, z: 0.5}
 --- !u!82 &8594196258681550418
 AudioSource:
   m_ObjectHideFlags: 0

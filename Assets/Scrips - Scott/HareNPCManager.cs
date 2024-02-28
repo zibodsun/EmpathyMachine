@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using Yarn.Unity;
@@ -11,6 +12,9 @@ public class HareNPCManager : MonoBehaviour
     Dictionary<string, NPCActivity> activityLookup = new Dictionary<string, NPCActivity>();
     public NavMeshAgent agent;
     public NPC3D hare;
+    public Collider trigger;
+
+    public GameObject feedbackForm;
 
     string currentActivity;
 
@@ -34,6 +38,8 @@ public class HareNPCManager : MonoBehaviour
         }
 
         animator.SetFloat("speed", agent.velocity.sqrMagnitude);
+
+        CheckTaskComplete();
     }
 
     [YarnCommand("setActivity")]
@@ -59,5 +65,32 @@ public class HareNPCManager : MonoBehaviour
         {
             toActivate.SetActive(true);
         }
+    }
+
+    public void CheckTaskComplete()
+    {
+        bool complete = true;
+        string[] taskObjects = activityLookup[currentActivity].taskObjects;
+
+        complete = taskObjects.Length > 0;
+
+        foreach(string taskObject in taskObjects)
+        {
+            if (GameObject.Find(taskObject) == null)
+            {
+                complete = false;
+            }
+        }
+
+        if (complete)
+        {
+            hare.talkToNode = "chooseTask";
+        }
+    }
+
+    [YarnCommand ("feedback")]
+    public void ActivateFeedbackForm()
+    {
+        feedbackForm.SetActive(true);
     }
 }

@@ -16,5 +16,8 @@ MonoBehaviour:
   animationTrigger: Draw
   agentDestination: {x: 6.650242, y: 0.464, z: 12.709153}
   dialogueNode: draw
-  activateGameObjectName: 
+  taskObjects:
+  - Marker (Target) (3)
+  - Marker (Target) (4)
+  - Marker (Target) (5)
   rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}

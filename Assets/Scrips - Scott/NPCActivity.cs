@@ -10,7 +10,7 @@ public class NPCActivity : ScriptableObject
     public Vector3 agentDestination;
     public string dialogueNode;
 
-    public string activateGameObjectName;
+    public string[] taskObjects;
 
     public Quaternion rotation;
 }

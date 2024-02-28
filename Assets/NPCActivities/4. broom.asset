@@ -16,5 +16,6 @@ MonoBehaviour:
   animationTrigger: Talking
   agentDestination: {x: 3.34, y: 0.782, z: 5.02}
   dialogueNode: broom
-  activateGameObjectName: 
+  taskObjects:
+  - Broom (Target)
   rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
