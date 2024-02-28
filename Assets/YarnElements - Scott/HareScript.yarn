@@ -46,6 +46,9 @@ What should we do next? #line:0ef5a56
 
 -> Put away markers <<if $markersDone is false>> #line:0624c59 
     Excellent idea! Follow me! #line:excellent 
+    <<activateWondrousProperties Marker>>
+    <<activateWondrousProperties Marker1>>
+    <<activateWondrousProperties Marker2>>
     <<setActivity Hare markerPickup>>
     <<set $markersDone to true>>
 -> Put away toy gun <<if $gunDone is false>> #line:05d9e33 

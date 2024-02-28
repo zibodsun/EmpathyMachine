@@ -16,7 +16,7 @@ public class animatePen : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(!tween.IsPlaying());
+        // Debug.Log(!tween.IsPlaying());
 
         if (!tween.IsPlaying())
         {
