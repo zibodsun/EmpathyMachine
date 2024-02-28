@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/DreamFable.unity
     guid: f0e1107c9dea4f347b3319f633036017
   - enabled: 0
-    path: Assets/Scenes/0_BedroomScene Zibo.unity
+    path: Assets/Scenes/[BedroomScene 27-02] Backup.unity
     guid: 4541c1cc578e71e42980b160f56dfbe3
   - enabled: 1
-    path: Assets/Scenes/BedroomScene MASTER.unity
+    path: Assets/Scenes/[BedroomScene 28-02] Backup.unity
     guid: ead28d2caeafc694aa36863239646df4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
