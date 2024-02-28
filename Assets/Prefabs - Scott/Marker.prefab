@@ -66,6 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5770a536f54bc8419dc4d067787f39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  penColour: {r: 0, g: 0, b: 0, a: 0}
   drawing: {fileID: 1128390801072974312, guid: b51cb07e378db2d4bb18dea4b8c22599, type: 3}
   distanceBetweenPositions: 0.01
 --- !u!1 &7826539985603547881
