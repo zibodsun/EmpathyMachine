@@ -11,14 +11,16 @@ public class Broom : GenericWondrousObject
     public bool isSword;
     Animator anim;
     
-    void Start()
+    public override void Start()
     {
+        base.Start();
         anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
+        base.Update();
         if (isSword && !wondrousEvent.activeSelf)
         {
             anim.Play("TransformToBroom");

@@ -13,15 +13,17 @@ public class GrabbableToyTrain : GenericWondrousObject
     XRSimpleInteractable simpInteractable;
     XRGrabInteractable grabInteractable;
 
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         rend = GetComponent<MeshRenderer>();
         grabInteractable = GetComponent<XRGrabInteractable>();
         simpInteractable = GetComponent<XRSimpleInteractable>();
     }
 
-    private void Update()
+    public override void Update()
     {
+        base.Update();
         if (trainEvent.activeSelf == true)
         {
             AnimatedEventStarted();
