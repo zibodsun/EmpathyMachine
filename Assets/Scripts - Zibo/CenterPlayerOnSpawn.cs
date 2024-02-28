@@ -18,6 +18,9 @@ public class CenterPlayerOnSpawn : MonoBehaviour
     public ActionBasedSnapTurnProvider snapTurn;
     public ActionBasedContinuousTurnProvider continuousTurn;
 
+    bool _snap;
+    bool _turningChanged;   // Trigger to detect when turning option has been changed
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +41,19 @@ public class CenterPlayerOnSpawn : MonoBehaviour
             transform.position = spawn.position;
             Center();
         }
+
+        
+        if (_snap)
+        {
+            snapTurn.rightHandSnapTurnAction.action.Enable();
+            continuousTurn.rightHandTurnAction.action.Disable();
+        }
+        else if (!_snap)
+        {
+            snapTurn.rightHandSnapTurnAction.action.Disable();
+            continuousTurn.rightHandTurnAction.action.Enable();
+        }
+        
     }
 
     IEnumerator Center(float wait) {
@@ -68,18 +84,21 @@ public class CenterPlayerOnSpawn : MonoBehaviour
 
         if (PlayerPrefs.HasKey("turn"))
         {
+            _turningChanged = true;
             int value = PlayerPrefs.GetInt("turn");
             if (value == 0)
             {
                 Debug.Log("Set turning option to Snap");
                 snapTurn.rightHandSnapTurnAction.action.Enable();
                 continuousTurn.rightHandTurnAction.action.Disable();
+                _snap = true;
             }
             else if (value == 1)
             {
                 Debug.Log("Set turning option to Continuous");
                 snapTurn.rightHandSnapTurnAction.action.Disable();
                 continuousTurn.rightHandTurnAction.action.Enable();
+                _snap = false;
             }
         }
     }
