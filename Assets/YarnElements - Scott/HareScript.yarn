@@ -39,7 +39,7 @@ tags:
 <<endif>>
 
 <<if $introDone>>
-What should we do next? #line:0ef5a56 
+What should we do next? #line:whatnext 
 <<endif>>
 
 <<set $introDone to true>>
@@ -62,7 +62,7 @@ What should we do next? #line:0ef5a56
     <<setActivity Hare broom>>
     <<set $broomDone to true>>
 -> Put away train <<if $trainDone is false>> #line:02dfc93 
-    If you say so! #line:0fccbb3
+    If you say so! #line:sayso
     <<activateWondrousProperties Train>>
     <<setActivity Hare train>>
     <<set $trainDone to true>>
@@ -88,28 +88,28 @@ Do some drawing! Then put them away when you're ready #line:somedrawing
 title: broom
 tags:
 ---
-The broom belongs in the corner. Let's return it #line:0b5fbe3
+The broom belongs in the corner. Let's return it #line:broomcorner
 ===
 
 title: toygun
 tags:
 ---
-The toy gun has been left out. Put it back in the toy box #line:0cdc429 
+The toy gun has been left out. Put it back in the toy box #line:toygun 
 ===
 
 title: train
 tags:
 ---
-Another toy left out. It belongs in the toy box #line:09e53b0 
+Another toy left out. It belongs in the toy box #line:traintoy 
 ===
 
 title: ending
 tags:
 ---
-Phew! I think we're done! #line:02fd51c 
-You put everything away and the room looks tidy. Well done! #line:0081812 
-Give us some feedback on your experience before you go
-I'm going to take a nap!
+Phew! I think we're done! #line:phew 
+You put everything away and the room looks tidy. Well done! #line:welldone 
+Give us some feedback on your experience before you go #line:feedback
+I'm going to take a nap! #line:nap
 <<feedback Hare>>
 <<setActivity Hare end>>
 ===
