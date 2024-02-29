@@ -20,6 +20,9 @@
   </p>
 </div>
 
+### Watch Full Video Here
+[<img src="https://img.youtube.com/vi/2zJ5u35rqm0/maxresdefault.jpg" alt="YouTube Thumbnail" width="512"/>](https://www.youtube.com/watch?v=2zJ5u35rqm0)
+
 <!-- Table of Contents -->
 <details>
   <summary>Table of Contents</summary>
