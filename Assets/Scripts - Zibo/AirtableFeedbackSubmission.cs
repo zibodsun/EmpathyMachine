@@ -58,6 +58,6 @@ public class AirtableFeedbackSubmission : MonoBehaviour
 
     public void OnSubmitAndQuit() {
         airtableManager.CreateRecord();
-        // Application.Quit();
+        Application.Quit();
     }
 }
