@@ -31,6 +31,7 @@ public class GenericWondrousObject : MonoBehaviour
         {
             transform.position = spawn;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
     }
 
